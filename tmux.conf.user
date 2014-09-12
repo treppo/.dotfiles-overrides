@@ -1,0 +1,42 @@
+# SOLARIZED TERMCOL  XTERM/HEX
+# --------- -------  -----------
+# base03    brblack  234 #1c1c1c
+# base02    black    235 #262626
+# base01    brgreen  240 #585858
+# base00    bryellow 241 #626262
+# base0     brblue   244 #808080
+# base1     brcyan   245 #8a8a8a
+# base2     white    254 #e4e4e4
+# base3     brwhite  230 #ffffd7
+# yellow    yellow   136 #af8700
+# orange    brred    166 #d75f00
+# red       red      160 #d70000
+# magenta   magenta  125 #af005f
+# violet    brmagenta 61 #5f5faf
+# blue      blue      33 #0087ff
+# cyan      cyan      37 #00afaf
+# green     green     64 #5f8700
+
+set -g status-fg black
+set -g status-bg colour230
+set -g message-fg colour234
+set -g message-bg blue
+set -g status-left '#[fg=brightyellow,bg=white] #S #[fg=white,bg=brightwhite]⮀'
+set -g status-right '#[fg=white,bg=brightwhite]⮂#[fg=brightyellow,bg=white] #(date "+%a %d %b  %H:%M") '
+set -g window-status-format "#[fg=brightwhite,bg=white]⮀#[fg=brightyellow,bg=white] #I: #W #[fg=white,bg=brightwhite]⮀"
+set -g window-status-current-format "#[fg=brightwhite,bg=blue]⮀#[fg=brightblack,bg=blue] #I: #W #[fg=blue,bg=brightwhite]⮀"
+
+# Setup 'v' to begin selection as in Vim
+bind-key -t vi-copy v begin-selection
+bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+
+# Update default binding of `Enter` to also use copy-pipe
+unbind -t vi-copy Enter
+bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+
+# Start copy mode with j and k
+unbind [
+bind-key k copy-mode
+
+# Open new windows in current directory
+bind-key c new-window -c "#{pane_current_path}"

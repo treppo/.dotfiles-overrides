@@ -1,0 +1,7 @@
+set defsearch=s
+colorscheme solarized-light
+set showtabline=never
+au Fullscreen .* :set guioptions+=s
+nmap s -ex :set guioptions!=s
+nmap l -ex :set showtabline!=never,always
+
