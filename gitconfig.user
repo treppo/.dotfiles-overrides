@@ -1,2 +1,5 @@
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
+[user]
+  name = Christian Treppo
+  email = christian@treppo.org
