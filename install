@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+mv ~/.gitconfig.user{,.backup}
+mv ~/.pentadactyl{,.backup}
+mv ~/.pentadactylrc{,.backup}
+mv ~/.tmux.conf.user{,.backup}
+mv ~/.zprofile{,.backup}
+
+cp .gitconfig.user ~
+cp -r .pentadactyl ~
+cp .pentadactylrc ~
+cp .tmux.conf.user ~
+cp .zprofile ~
