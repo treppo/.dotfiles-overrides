@@ -6,8 +6,10 @@ mv ~/.pentadactylrc{,.backup}
 mv ~/.tmux.conf.user{,.backup}
 mv ~/.zprofile{,.backup}
 
-cp .gitconfig.user ~
-cp -r .pentadactyl ~
-cp .pentadactylrc ~
-cp .tmux.conf.user ~
-cp .zprofile ~
+PWD=`pwd`
+
+ln -s $PWD/.gitconfig.user ~
+ln -s $PWD/.pentadactyl ~
+ln -s $PWD/.pentadactylrc ~
+ln -s $PWD/.tmux.conf.user ~
+ln -s $PWD/.zprofile ~
