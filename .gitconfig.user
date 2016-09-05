@@ -3,3 +3,10 @@
 [user]
   name = Christian Treppo
   email = christian@treppo.org
+  signingkey = AEA8FDEDBE26678A
+[secrets]
+  providers = cat /Users/ctreppo/.gitsecrets/provider
+[init]
+  templateDir = /Users/ctreppo/.gitsecrets/hooks
+[commit]
+  gpgsign = true
