@@ -20,3 +20,6 @@ nmap l :set toolbars=invtabs<CR>
 
 " toggle navbar
 nmap k :set toolbars=invnavigation<CR>
+
+" show in reader view
+nmap v :execute "open about:reader?url=" + content.location.href<CR>

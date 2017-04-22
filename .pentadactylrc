@@ -28,3 +28,7 @@ set scrolltime=0
 
 " Show pattern matches as you type,
 set incfind
+
+" add reader view mode
+:command reader execute "open about:reader?url=" + content.location.href
+nmap v -ex :reader
