@@ -1,0 +1,22 @@
+colorscheme solarized-light
+
+" deactivate navigation bar
+set gui=nonavigation
+
+" don't focus input
+set focuscontent
+
+" font sizes
+" status line
+hi Normal -append font-size: 12pt !important;
+" hints
+hi Hint -append font-size: 12pt !important;
+
+" use characters for hints
+set hintchars=ashtneoicl
+
+" toggle tabs
+nmap l :set toolbars=invtabs<CR>
+
+" toggle navbar
+nmap k :set toolbars=invnavigation<CR>
