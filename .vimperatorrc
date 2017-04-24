@@ -1,7 +1,7 @@
 colorscheme solarized-light
 
 " deactivate navigation bar
-set gui=nonavigation
+set gui=nonavigation,notabs
 
 " don't focus input
 set focuscontent
@@ -23,3 +23,7 @@ nmap k :set toolbars=invnavigation<CR>
 
 " show in reader view
 nmap v :execute "open about:reader?url=" + content.location.href<CR>
+
+" scroll faster
+:noremap j 3j
+:noremap k 3k
